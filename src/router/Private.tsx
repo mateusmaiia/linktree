@@ -21,11 +21,12 @@ export function Private({children}: PrivateProps): any{
                 }
 
                 localStorage.setItem("@reactlinks", JSON.stringify(userData))
-
                 setLoading(false)
                 setSigned(true)
+               
             }else{
-                console.log('nao tem user logado')
+                setLoading(false)
+                setSigned(false)
             }
         })
 
@@ -36,7 +37,7 @@ export function Private({children}: PrivateProps): any{
     }, [])
 
     if(loading){
-        return <></>
+        return <div className="text-7xl">1</div>
     }
 
     if(!signed){
