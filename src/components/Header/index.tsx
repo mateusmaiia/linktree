@@ -10,7 +10,7 @@ export function Header(){
     }
 
     return(
-        <header className='w-full max-w-2xl mt-4 px-1'>
+        <header className='w-full max-w-2xl mt-6 px-1'>
            <nav className='w-full bg-white h-12 flex items-center justify-between rounded-md px-3'>
                 <div className='flex gap-4 font-medium'>
                     <Link to='/'>
