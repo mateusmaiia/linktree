@@ -80,6 +80,11 @@ export function Admin(){
         })
     }
 
+    async function handleDeleteLink(id: string){
+        const docRef = doc(db, "links", id)
+
+        await deleteDoc(docRef)
+    }
     return(
         <div className="flex items-center flex-col min-h-screen pb-7 px-2">
             <Header />
@@ -152,7 +157,8 @@ export function Admin(){
             <p className=" font-medium">{item.name}</p>
             <div>
                 <button
-                    className="border border-dashed p-1 rounded bg-neutral-900"
+                    className="border border-dashed p-1 rounded bg-neutral-900 hover:bg-red-600 transition-transform"
+                    onClick={() => handleDeleteLink(item.id)}
                 >
                     <FiTrash size={18} color="#fff"/>
                 </button>
