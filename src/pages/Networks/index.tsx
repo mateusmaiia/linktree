@@ -5,7 +5,7 @@ import { useState, FormEvent, useEffect } from "react";
 import {db} from '../../services/firebaseConnection'//trazer conexão com o banco.
 import {
     setDoc,             //cria um item, mas a gente quem escreve o nome    faz update/substitui os items que ja existem
-    addDoc,             //cria um documento/item com id aleatório          update caso seja registrado por cima de um valor que estava
+                 //cria um documento/item com id aleatório          update caso seja registrado por cima de um valor que estava
     getDoc,              //buscar uma vez um único documento  
     doc
 } from 'firebase/firestore'
