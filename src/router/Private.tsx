@@ -37,7 +37,11 @@ export function Private({children}: PrivateProps): any{
     }, [])
 
     if(loading){
-        return <div className="text-7xl">1</div>
+        return <div className="text-7xl">
+            <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center" style={{ background: 'linear-gradient(#232730, #050507)' }}>
+                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+            </div>
+        </div>
     }
 
     if(!signed){
